@@ -4,6 +4,7 @@ public class For {
   public static void main(String[] args) {
     int[] number = new int[10];
     int increment = 0;
+    int count = 0;
 
     for (int i = 0; i <= number.length -1; i++){
       number[i] = increment;
@@ -11,6 +12,11 @@ public class For {
     }
     for (int i : number){ // Equals a for of -> getting values from array
       System.out.println(i);
+    }
+
+    for (;count <= 10;){
+      System.out.println(count);
+      count++;
     }
   }
 }
