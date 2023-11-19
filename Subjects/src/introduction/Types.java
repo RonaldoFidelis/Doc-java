@@ -1,4 +1,4 @@
-package introdution;
+package introduction;
 
 public class Types {
   public static void main(String[] args) {
