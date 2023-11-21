@@ -88,3 +88,48 @@ Neste exemplo, `Carro` é a classe, e `meuCarro` e `outroCarro` são objetos des
 4. **Abstração:** Simplifica complexidades dividindo o sistema em partes pequenas.
 
 Estes são conceitos fundamentais em Java e na programação orientada a objetos em geral. Classes são a base para organizar e estruturar código em Java, facilitando a criação e manutenção de programas.
+
+### Argumentos opcionais ###
+No Java, os parâmetros de métodos e construtores não podem ser especificados como opcionais diretamente, como em algumas linguagens de programação modernas que suportam argumentos padrão ou argumentos opcionais. No entanto, você pode alcançar um comportamento semelhante usando sobrecarga de métodos ou construtores.
+
+A sobrecarga de métodos ou construtores envolve criar várias versões do método ou construtor com diferentes conjuntos de parâmetros. Cada versão fornece uma opção diferente para os argumentos.
+
+Aqui está um exemplo básico usando sobrecarga de construtores para criar uma classe com argumentos opcionais:
+
+```java
+public class ExemploClasse {
+    private int parametro1;
+    private String parametro2;
+
+    // Construtor padrão sem parâmetros
+    public ExemploClasse() {
+        this.parametro1 = 0;
+        this.parametro2 = "Padrão";
+    }
+
+    // Construtor com um parâmetro opcional
+    public ExemploClasse(int parametro1) {
+        this.parametro1 = parametro1;
+        this.parametro2 = "Padrão";
+    }
+
+    // Construtor com dois parâmetros opcionais
+    public ExemploClasse(int parametro1, String parametro2) {
+        this.parametro1 = parametro1;
+        this.parametro2 = parametro2;
+    }
+
+    // Outros métodos da classe...
+
+    public static void main(String[] args) {
+        // Exemplos de uso
+        ExemploClasse exemplo1 = new ExemploClasse();
+        ExemploClasse exemplo2 = new ExemploClasse(42);
+        ExemploClasse exemplo3 = new ExemploClasse(42, "Customizado");
+    }
+}
+```
+
+Neste exemplo, a classe `ExemploClasse` tem três construtores diferentes. O primeiro construtor é sem parâmetros e fornece valores padrão. O segundo construtor aceita um parâmetro opcional e define um valor padrão para o segundo parâmetro. O terceiro construtor aceita ambos os parâmetros opcionais.
+
+Quando você cria uma instância da classe, pode escolher usar o construtor que melhor se adapta às suas necessidades, fornecendo os parâmetros desejados ou deixando os valores padrão serem utilizados.
