@@ -1,20 +1,17 @@
 package Array;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class IntrodutionArray {
   public static void main(String[] args) {
-    String[] task = new String[10];
-    boolean condition = true;
-    while(condition){
-      Scanner scan = new Scanner(System.in);
-
-      System.out.println("Added a task or exit?");
-
-
-
-      scan.close();
+    /*How define array at java*/
+    Scanner scan = new Scanner(System.in);
+    int[] note = new int[10];
+    for(int i=0;i<10;i++){
+      System.out.printf("Nota#%d:",i+1);
+      note[i] = scan.nextInt();
     }
+
+    scan.close();
   }
 }
