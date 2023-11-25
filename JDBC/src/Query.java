@@ -21,14 +21,13 @@ public class Query {
 
       // Verificar se há resultados antes de tentar executar o UPDATE
       if (resultSet.next()) {
-        // Executar a atualização
         statement.executeUpdate("ALTER TABLE CLIENTE MODIFY CPF VARCHAR(11);");
         statement.executeUpdate("UPDATE CLIENTE SET CPF = 11111111122 WHERE NOME = 'JORGE';");
         System.out.println("Update bem-sucedido!");
       } else {
         System.out.println("Nenhum resultado encontrado para o nome 'JORGE'.");
       }
-      
+
       resultSet.close();
       statement.close();
       connection.close();
