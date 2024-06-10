@@ -2,7 +2,7 @@ package Example;
 
 import java.util.*;
 
-public class Main {
+public class Collections {
   public static void main(String[] args) {
     int[] array = new int[10];
 
