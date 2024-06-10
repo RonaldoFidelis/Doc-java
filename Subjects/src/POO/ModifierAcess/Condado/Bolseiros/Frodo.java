@@ -1,10 +1,12 @@
 package POO.ModifierAcess.Condado.Bolseiros;
 
 public class Frodo {
+
   private String secret = "I know bilbo has the ring";
   String inHome = "And useful";
   protected String about = "Boring";
   public String myFamily = "Bolseiro";
+
   void iKnow(){
     Bilbo tio = new Bilbo();
 
